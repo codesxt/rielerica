@@ -1,0 +1,72 @@
+[gd_scene load_steps=6 format=3 uid="uid://cnwilghwi3gsn"]
+
+[ext_resource type="Script" path="res://scenes/main-menu/main-menu.gd" id="1_1ocqx"]
+[ext_resource type="TileSet" uid="uid://kxsubf6l0eyo" path="res://resources/tilesets/base.tres" id="1_evco3"]
+[ext_resource type="PackedScene" uid="uid://d24meqvbvo7v6" path="res://scenes/player/player.tscn" id="2_oslnr"]
+[ext_resource type="FontFile" uid="uid://dpftv4yrfhcmk" path="res://addons/kenney-fonts/assets/kenney_kenney-fonts/Fonts/Kenney Mini Square.ttf" id="4_1q6ve"]
+[ext_resource type="PackedScene" uid="uid://bajhlwnx871en" path="res://scenes/cart/cart.tscn" id="5_38lec"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_1ocqx")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("1_evco3")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 0, 4, 65536, 0, 4, 131072, 0, 4, 196608, 0, 4, 262144, 0, 4, 327680, 0, 4, 1, 0, 4, 65537, 0, 4, 131073, 0, 4, 196609, 65536, 4, 262145, 0, 4, 327681, 0, 4, 2, 0, 4, 65538, 65536, 4, 131074, 0, 4, 196610, 0, 4, 262146, 0, 4, 327682, 0, 4, 3, 0, 4, 65539, 0, 4, 131075, 0, 4, 196611, 0, 4, 262147, 65536, 4, 327683, 65536, 4, 4, 0, 4, 65540, 0, 4, 131076, 65536, 4, 196612, 0, 4, 262148, 0, 4, 327684, 0, 4, 5, 0, 4, 65541, 0, 4, 131077, 0, 4, 196613, 0, 4, 262149, 0, 4, 327685, 0, 4, 6, 0, 4, 65542, 0, 4, 131078, 0, 4, 196614, 65536, 4, 262150, 0, 4, 327686, 0, 4, 7, 65536, 4, 65543, 0, 4, 131079, 0, 4, 196615, 0, 4, 262151, 0, 4, 327687, 0, 4, 8, 0, 4, 65544, 0, 4, 131080, 0, 4, 196616, 0, 4, 262152, 0, 4, 327688, 0, 4, 9, 0, 4, 65545, 0, 4, 131081, 0, 4, 196617, 0, 4, 262153, 0, 4, 327689, 65536, 4, 10, 0, 4, 65546, 65536, 4, 131082, 65536, 4, 196618, 0, 4, 262154, 0, 4, 327690, 0, 4, 11, 0, 4, 65547, 0, 4, 131083, 0, 4, 196619, 0, 4, 262155, 0, 4, 327691, 0, 4, 12, 0, 4, 65548, 0, 4, 131084, 0, 4, 196620, 0, 4, 262156, 0, 4, 327692, 0, 4, 13, 0, 4, 65549, 65536, 4, 131085, 0, 4, 196621, 0, 4, 262157, 0, 4, 327693, 0, 4, 14, 0, 4, 65550, 0, 4, 131086, 0, 4, 196622, 0, 4, 262158, 0, 4, 327694, 65536, 4, 15, 0, 4, 65551, 0, 4, 131087, 0, 4, 196623, 65536, 4, 262159, 0, 4, 327695, 0, 4, 16, 0, 4, 65552, 0, 4, 131088, 65536, 4, 196624, 0, 4, 262160, 0, 4, 327696, 0, 4, 17, 0, 4, 65553, 0, 4, 131089, 0, 4, 196625, 0, 4, 262161, 0, 4, 327697, 0, 4, 18, 0, 4, 65554, 0, 4, 131090, 0, 4, 196626, 0, 4, 262162, 0, 4, 327698, 65536, 4, 19, 0, 4, 65555, 0, 4, 131091, 65536, 4, 196627, 0, 4, 262163, 0, 4, 327699, 0, 4)
+layer_1/name = ""
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = 0
+layer_1/z_index = 0
+layer_1/tile_data = PackedInt32Array(262144, 655360, 5, 262145, 655360, 5, 262146, 655360, 5, 262147, 655360, 5, 262148, 655360, 5, 262149, 655360, 5, 262150, 655360, 5, 262151, 655360, 5, 262152, 655360, 5, 262153, 655360, 5, 262154, 655360, 5, 262155, 655360, 5, 262156, 655360, 5, 262157, 655360, 5, 262158, 655360, 5, 262159, 655360, 5, 262160, 655360, 5, 262161, 655360, 5, 262162, 655360, 5, 262163, 655360, 5)
+
+[node name="Player" parent="." instance=ExtResource("2_oslnr")]
+position = Vector2(74, 54)
+
+[node name="Player2" parent="." instance=ExtResource("2_oslnr")]
+position = Vector2(15, 54)
+
+[node name="Player3" parent="." instance=ExtResource("2_oslnr")]
+position = Vector2(45, 54)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
+limit_left = 0
+limit_top = 0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 1.0
+offset_right = 253.0
+offset_bottom = 54.0
+scale = Vector2(0.6, 0.6)
+theme_override_colors/font_color = Color(0.576471, 0.333333, 0.654902, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("4_1q6ve")
+theme_override_font_sizes/font_size = 40
+text = "Rielérica"
+vertical_alignment = 1
+
+[node name="LoginButton" type="Button" parent="."]
+offset_left = 176.0
+offset_top = 17.0
+offset_right = 314.0
+offset_bottom = 47.0
+theme_override_fonts/font = ExtResource("4_1q6ve")
+text = "Iniciar Sesión"
+
+[node name="StartButton" type="Button" parent="."]
+offset_left = 175.0
+offset_top = 53.0
+offset_right = 315.0
+offset_bottom = 83.0
+theme_override_fonts/font = ExtResource("4_1q6ve")
+text = "Iniciar Juego"
+
+[node name="Cart" parent="." instance=ExtResource("5_38lec")]
+position = Vector2(97, 60)
+
+[connection signal="pressed" from="LoginButton" to="." method="_on_login_button_pressed"]
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]

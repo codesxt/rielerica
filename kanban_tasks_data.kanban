@@ -1,0 +1,95 @@
+{
+	"categories": [
+		{
+			"uuid": "6ff82954-578d-4655-bb05-b46ba0f69428",
+			"title": "Task",
+			"color": "70bafa"
+		}
+	],
+	"stages": [
+		{
+			"uuid": "506ec86a-c5bc-4ba0-8ad3-b90f06bd2e98",
+			"title": "Todo",
+			"tasks": []
+		},
+		{
+			"uuid": "87ac64ba-633c-4fbd-a4df-3a75b6331256",
+			"title": "Doing",
+			"tasks": []
+		},
+		{
+			"uuid": "9c636dec-6409-4fda-a8cd-fde4acb5b7ef",
+			"title": "Done",
+			"tasks": [
+				"a2137439-cac0-48ff-aba9-9b668e9f337b",
+				"40e4781b-5a94-4d71-b8fc-d7e869175d1d",
+				"8df0004c-8831-407e-aa86-f2de6a986def",
+				"6f8ee408-7343-4aaf-9096-fdb48ea0e6ee"
+			]
+		}
+	],
+	"tasks": [
+		{
+			"uuid": "40e4781b-5a94-4d71-b8fc-d7e869175d1d",
+			"title": "Add method to move cart to target",
+			"description": "",
+			"category": "6ff82954-578d-4655-bb05-b46ba0f69428",
+			"steps": []
+		},
+		{
+			"uuid": "a2137439-cac0-48ff-aba9-9b668e9f337b",
+			"title": "Trigger signal when cart reaches target",
+			"description": "",
+			"category": "6ff82954-578d-4655-bb05-b46ba0f69428",
+			"steps": []
+		},
+		{
+			"uuid": "8df0004c-8831-407e-aa86-f2de6a986def",
+			"title": "Different Cart Payloads",
+			"description": "La idea es que el carrito pueda llevar distintas \"cargas\" y que cada una tenga un efecto especial.",
+			"category": "6ff82954-578d-4655-bb05-b46ba0f69428",
+			"steps": [
+				{
+					"details": "Crear un campo payload en el carrito",
+					"done": true
+				},
+				{
+					"details": "Darle un valor al azar al inicio",
+					"done": true
+				},
+				{
+					"details": "Hacer que cuando explote la bomba, se lea el payload",
+					"done": true
+				},
+				{
+					"details": "hacer una condición según el payload para calcular el tiempo de ban",
+					"done": true
+				},
+				{
+					"details": "Hacer que según el payload, la bomba se vea distinto",
+					"done": true
+				}
+			]
+		},
+		{
+			"uuid": "6f8ee408-7343-4aaf-9096-fdb48ea0e6ee",
+			"title": "Revisar cart_instance",
+			"description": "",
+			"category": "6ff82954-578d-4655-bb05-b46ba0f69428",
+			"steps": []
+		}
+	],
+	"layout": {
+		"columns": [
+			[
+				"506ec86a-c5bc-4ba0-8ad3-b90f06bd2e98"
+			],
+			[
+				"87ac64ba-633c-4fbd-a4df-3a75b6331256"
+			],
+			[
+				"9c636dec-6409-4fda-a8cd-fde4acb5b7ef"
+			]
+		]
+	}
+}

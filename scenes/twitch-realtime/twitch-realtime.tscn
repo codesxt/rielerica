@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6lgoh6umvidp"]
+
+[ext_resource type="Script" path="res://scenes/twitch-realtime/twitch-realtime.gd" id="1_x0jfm"]
+
+[node name="TwitchRealtime" type="Node"]
+script = ExtResource("1_x0jfm")
+
+[connection signal="connected_to_irc" from="." to="." method="_on_connected_to_irc"]

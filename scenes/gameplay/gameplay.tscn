@@ -1,0 +1,82 @@
+[gd_scene load_steps=7 format=3 uid="uid://diusm2vgu3c5x"]
+
+[ext_resource type="Script" path="res://scenes/gameplay/gameplay.gd" id="1_6o0gt"]
+[ext_resource type="TileSet" uid="uid://kxsubf6l0eyo" path="res://resources/tilesets/base.tres" id="2_ibfh0"]
+[ext_resource type="PackedScene" uid="uid://c6lgoh6umvidp" path="res://scenes/twitch-realtime/twitch-realtime.tscn" id="4_g1pkd"]
+[ext_resource type="Script" path="res://scenes/gameplay/keyboard_input.gd" id="4_rkjk2"]
+[ext_resource type="PackedScene" uid="uid://kobpg248tn" path="res://scenes/twitch-api/twitch-api.tscn" id="5_dlnw2"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_ov6i6"]
+vertices = PackedVector2Array(320, 0, 320, 96, 0, 96, 0, 0)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(0, 0, 0, 96, 320, 96, 320, 0)])
+
+[node name="Gameplay" type="Node2D"]
+script = ExtResource("1_6o0gt")
+
+[node name="Level" type="Node2D" parent="."]
+
+[node name="TileMap" type="TileMap" parent="Level"]
+tile_set = ExtResource("2_ibfh0")
+format = 2
+layer_0/name = "Floor"
+layer_0/tile_data = PackedInt32Array(0, 0, 4, 65536, 0, 4, 131072, 0, 4, 131073, 0, 4, 196609, 65536, 4, 196608, 0, 4, 262144, 0, 4, 262145, 0, 4, 262146, 0, 4, 262147, 65536, 4, 262148, 0, 4, 262149, 0, 4, 262150, 0, 4, 262151, 0, 4, 262152, 0, 4, 262153, 0, 4, 262154, 0, 4, 262155, 0, 4, 262156, 0, 4, 262157, 0, 4, 262158, 0, 4, 196622, 0, 4, 196623, 65536, 4, 196624, 0, 4, 196625, 0, 4, 262161, 0, 4, 262160, 0, 4, 262159, 0, 4, 17, 0, 4, 16, 0, 4, 15, 0, 4, 14, 0, 4, 13, 0, 4, 12, 0, 4, 11, 0, 4, 10, 0, 4, 9, 0, 4, 8, 0, 4, 7, 65536, 4, 6, 0, 4, 5, 0, 4, 4, 0, 4, 3, 0, 4, 2, 0, 4, 1, 0, 4, 65537, 0, 4, 65538, 65536, 4, 65539, 0, 4, 65540, 0, 4, 65541, 0, 4, 65542, 0, 4, 65543, 0, 4, 65544, 0, 4, 65545, 0, 4, 65546, 65536, 4, 65547, 0, 4, 65548, 0, 4, 65549, 65536, 4, 65550, 0, 4, 65551, 0, 4, 65552, 0, 4, 65553, 0, 4, 131089, 0, 4, 131088, 65536, 4, 131087, 0, 4, 131086, 0, 4, 131085, 0, 4, 131084, 0, 4, 131083, 0, 4, 131082, 65536, 4, 131081, 0, 4, 131080, 0, 4, 131079, 0, 4, 131078, 0, 4, 131077, 0, 4, 131076, 65536, 4, 131075, 0, 4, 131074, 0, 4, 196610, 0, 4, 196611, 0, 4, 196612, 0, 4, 196613, 0, 4, 196614, 65536, 4, 196615, 0, 4, 196616, 0, 4, 196617, 0, 4, 196618, 0, 4, 196619, 0, 4, 196620, 0, 4, 196621, 0, 4, 327680, 0, 4, 327681, 0, 4, 327682, 0, 4, 327683, 65536, 4, 327684, 0, 4, 327685, 0, 4, 327686, 0, 4, 327687, 0, 4, 327688, 0, 4, 327689, 65536, 4, 327690, 0, 4, 327691, 0, 4, 327692, 0, 4, 327693, 0, 4, 327694, 65536, 4, 327695, 0, 4, 327696, 0, 4, 327697, 0, 4, 327698, 65536, 4, 327699, 0, 4, 262163, 0, 4, 196627, 0, 4, 131091, 65536, 4, 65555, 0, 4, 19, 0, 4, 18, 0, 4, 65554, 0, 4, 131090, 0, 4, 196626, 0, 4, 262162, 0, 4)
+layer_1/name = "Rails"
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = 0
+layer_1/z_index = 0
+layer_1/tile_data = PackedInt32Array(262144, 655360, 5, 262145, 655360, 5, 262146, 655360, 5, 262147, 655360, 5, 262148, 655360, 5, 262149, 655360, 5, 262150, 655360, 5, 262151, 655360, 5, 262152, 655360, 5, 262153, 655360, 5, 262154, 655360, 5, 262155, 655360, 5, 262156, 655360, 5, 262157, 655360, 5, 262158, 655360, 5, 262159, 655360, 5, 262160, 655360, 5, 262161, 655360, 5, 262162, 655360, 5, 262163, 655360, 5)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="Level"]
+navigation_polygon = SubResource("NavigationPolygon_ov6i6")
+
+[node name="Players" type="Node2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
+limit_left = 0
+limit_top = 0
+
+[node name="Start" type="Node2D" parent="."]
+position = Vector2(-16, 64)
+
+[node name="End" type="Node2D" parent="."]
+position = Vector2(320, 64)
+
+[node name="CartSpawner" type="Timer" parent="."]
+wait_time = 60.0
+one_shot = true
+
+[node name="Ticker" type="Timer" parent="."]
+
+[node name="Letters" type="Node2D" parent="."]
+position = Vector2(0, 80)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 120.0
+offset_right = 504.0
+offset_bottom = 32.0
+scale = Vector2(0.5, 0.5)
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Remaining" type="Label" parent="."]
+offset_right = 226.0
+offset_bottom = 32.0
+scale = Vector2(0.5, 0.5)
+theme_override_font_sizes/font_size = 20
+vertical_alignment = 1
+
+[node name="KeyboardInput" type="Node2D" parent="."]
+script = ExtResource("4_rkjk2")
+
+[node name="TwitchRealtime" parent="." instance=ExtResource("4_g1pkd")]
+
+[node name="TwitchAPI" parent="." instance=ExtResource("5_dlnw2")]
+
+[connection signal="timeout" from="CartSpawner" to="." method="_on_cart_spawner_timeout"]
+[connection signal="timeout" from="Ticker" to="." method="_on_ticker_timeout"]
+[connection signal="chat_message" from="TwitchRealtime" to="." method="_on_twitch_realtime_chat_message"]
